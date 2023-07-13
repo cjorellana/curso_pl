@@ -19,7 +19,7 @@ BEGIN
                         INSTR(last_names || ',', ',', 1, random_index_last_name) + 1, 
                         INSTR(last_names || ',', ',', 1, random_index_last_name + 1) - 
                         INSTR(last_names || ',', ',', 1, random_index_last_name) - 1);
-    salary := DBMS_RANDOM.VALUE(30000, 80000);
+    salary := TRUNC(DBMS_RANDOM.VALUE(30000, 80000) * 100) / 100;
     hire_date := SYSDATE - DBMS_RANDOM.VALUE(1, 3650);
     INSERT INTO employees (firstname, lastname, salary, hire_date)
     VALUES (first_name, last_name, salary, hire_date);
