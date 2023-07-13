@@ -14,7 +14,7 @@ BEGIN
         ORDER BY DBMS_RANDOM.RANDOM)
       WHERE ROWNUM = 1;
       
-      order_total := DBMS_RANDOM.VALUE(100, 5000);
+      order_total := TRUNC(DBMS_RANDOM.VALUE(100, 5000) * 100) / 100;
       order_date := SYSDATE - DBMS_RANDOM.VALUE(1, 365);
       
       IF DBMS_RANDOM.VALUE(1, 10) > 3 THEN
