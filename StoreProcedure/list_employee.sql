@@ -1,0 +1,6 @@
+CREATE OR REPLACE PROCEDURE getEmployeeList(p_cursor OUT SYS_REFCURSOR)
+IS
+BEGIN
+  OPEN p_cursor FOR
+  SELECT * FROM employees;
+END;
