@@ -38,5 +38,14 @@ CREATE OR REPLACE PACKAGE BODY employee_pkg IS
     OPEN p_cursor FOR
     SELECT * FROM employees;
   END getEmployeeList;
+
+
+  PROCEDURE print_employee_details (employee_id_in NUMBER) IS
+    employee_name VARCHAR2(50);
+  BEGIN
+    employee_name := get_employee_name(employee_id_in);
+    DBMS_OUTPUT.PUT_LINE('Employee name: ' || employee_name);
+  END print_employee_details;
+  
 END employee_pkg;
 /
