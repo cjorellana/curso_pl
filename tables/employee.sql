@@ -4,6 +4,7 @@ CREATE TABLE employees (
   lastname VARCHAR2(50),
   hire_date DATE DEFAULT sysdate,
   salary NUMBER,
-  status VARCHAR2(20) DEFAULT 'ACTIVE' CHECK (status IN ('ACTIVE', 'INACTIVE'))
+  status VARCHAR2(20) DEFAULT 'ACTIVE' CHECK (status IN ('ACTIVE', 'INACTIVE')),
+  PRIMARY KEY(employee_id)
 );
 
