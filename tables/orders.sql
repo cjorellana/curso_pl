@@ -4,5 +4,6 @@ CREATE TABLE orders (
   order_date DATE DEFAULT SYSDATE,
   order_total NUMBER,
   status VARCHAR2(20) DEFAULT 'PENDING' CHECK (status IN ('PENDING', 'SHIPPED', 'CANCELLED')),
+  PRIMARY KEY(order_id),
   CONSTRAINT orders_employee_id_fk FOREIGN KEY (employee_id) REFERENCES employees (employee_id)
 );
