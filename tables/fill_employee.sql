@@ -1,6 +1,6 @@
 DECLARE 
-  first_names VARCHAR2(32767) := 'John,Mary,Steve,Emily,Robert,Karen,Paul,Emma,David,Linda';
-  last_names VARCHAR2(32767) := 'Smith,Johnson,Williams,Brown,Jones,Miller,Davis,Garcia,Rodriguez,Wilson';
+  first_names VARCHAR2(32767) := 'John,Mary,Steve,Emily,Robert,Karen,Paul,Emma,David,Linda,AnaIsabel,Monica,Daniel,Erick,Douglas';
+  last_names VARCHAR2(32767) := 'Smith,Johnson,Williams,Brown,Jones,Miller,Davis,Garcia,Rodriguez,Wilson,Palma,Par,Paiz,Ruiz';
   first_name VARCHAR2(50);
   last_name VARCHAR2(50);
   salary NUMBER;
