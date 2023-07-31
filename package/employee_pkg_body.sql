@@ -41,5 +41,23 @@ create or replace PACKAGE BODY employee_pkg IS
     SELECT * FROM employees;
   END getEmployeeList;
 
+  /*listar ventas de empleado*/
+  PROCEDURE getEmployeeSales(
+    p_employee_id IN employees.employee_id%type,
+    p_cursor OUT SYS_REFCURSOR
+  )  
+  IS
+  BEGIN  
+    OPEN p_cursor FOR
+    SELECT
+        order_id,    
+        EMPLOYEE_PKG.getEmployeeName(employee_id),
+        order_date,
+        order_total,
+        status
+    FROM
+        orders;
+  
+  END getEmployeeSales;
 
 END employee_pkg;
