@@ -2,7 +2,7 @@ import oracledb
 
 un = 'rrhh'
 pw = 'rrhh'
-cs = '10.0.3.80:1521/wdesa2'
+cs = 'localhost:1521/XE'
 
 stored_procedure = "EMPLOYEE_PKG.getEmployeeSales"
 
