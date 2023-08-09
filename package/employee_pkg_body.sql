@@ -57,6 +57,8 @@ create or replace PACKAGE BODY employee_pkg IS
         status
     FROM
         orders;
+    WHERE
+        employee_id= p_employee_id;
   
   END getEmployeeSales;
 
